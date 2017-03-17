@@ -8,15 +8,19 @@ public class Pair<K, V> {
         this.key = key;
         this.value = value;
     }
+
     /**
      * 获得key值
+     * 
      * @return
      */
     public K getKey() {
         return key;
     }
+
     /**
      * 获得value
+     * 
      * @return
      */
     public V getValue() {

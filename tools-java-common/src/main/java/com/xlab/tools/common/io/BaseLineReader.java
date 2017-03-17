@@ -12,8 +12,10 @@ import org.apache.logging.log4j.Logger;
 import com.xlab.tools.common.logger.LogUtil;
 
 /**
- * <p>基础文件的读写</p>
- *
+ * <p>
+ * 基础文件的读写
+ * </p>
+ * 
  */
 public abstract class BaseLineReader<D> {
     private Logger log = LogUtil.getCommonLogger();
@@ -25,28 +27,28 @@ public abstract class BaseLineReader<D> {
      * @return
      * @throws Exception
      */
-    public List<D> readByLines(String filename,LineProcessor<D> processor){
+    public List<D> readByLines(String filename, LineProcessor<D> processor) {
         List<D> list = new ArrayList<>();
         BufferedReader br = null;
         String line = null;
         try {
             br = getReader(filename);
-            while(null!=(line = br.readLine())){
-                if(line!=null && !line.isEmpty()){
-                   D d = processor.process(line);
-                   if(d!=null){
-                       list.add(d);
-                   }
+            while (null != (line = br.readLine())) {
+                if (line != null && !line.isEmpty()) {
+                    D d = processor.process(line);
+                    if (d != null) {
+                        list.add(d);
+                    }
                 }
             }
         } catch (IOException e) {
-            log.error("load fail..."+filename,e);
-        }finally{
-            if(br!=null){
+            log.error("load fail..." + filename, e);
+        } finally {
+            if (br != null) {
                 try {
                     br.close();
                 } catch (IOException e) {
-                    log.error("close  fail..."+filename,e);
+                    log.error("close  fail..." + filename, e);
                 }
             }
         }
@@ -55,10 +57,12 @@ public abstract class BaseLineReader<D> {
 
     /**
      * 获得缓存流的读写
+     * 
      * @param filename
      * @return
      * @throws UnsupportedEncodingException
-     * @throws FileNotFoundException 
+     * @throws FileNotFoundException
      */
-    protected abstract BufferedReader getReader(String filename) throws UnsupportedEncodingException, FileNotFoundException ;
+    protected abstract BufferedReader getReader(String filename)
+            throws UnsupportedEncodingException, FileNotFoundException;
 }

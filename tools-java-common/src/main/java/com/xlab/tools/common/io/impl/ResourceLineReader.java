@@ -20,7 +20,7 @@ public class ResourceLineReader<D> extends BaseLineReader<D> {
     protected BufferedReader getReader(String filename) throws UnsupportedEncodingException {
         BufferedReader br;
         InputStream is = ResourceLineReader.class.getClassLoader().getResourceAsStream(filename);
-        br = new BufferedReader(new InputStreamReader(is,"UTF-8"));
+        br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
         return br;
     }
 

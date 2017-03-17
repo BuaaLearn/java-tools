@@ -1,4 +1,5 @@
 package com.xlab.tools.common.io.impl;
+
 import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -12,14 +13,14 @@ import com.xlab.tools.common.io.BaseLineReader;
  * 文件行阅读器
  * </p>
  */
-public class FileLineReader<D>  extends BaseLineReader<D>{
+public class FileLineReader<D> extends BaseLineReader<D> {
 
 
     @Override
-    protected BufferedReader getReader(String filename) throws UnsupportedEncodingException, FileNotFoundException {
+    protected BufferedReader getReader(String filename) throws UnsupportedEncodingException,
+            FileNotFoundException {
         InputStream input = new FileInputStream(filename);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(input,
-                "UTF-8"));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(input, "UTF-8"));
         return reader;
     }
 

@@ -20,8 +20,7 @@ public class FileMapLineReader<K, V> extends BaseMapLineReader<K, V> {
     protected BufferedReader getReader(String filename) throws UnsupportedEncodingException,
             FileNotFoundException {
         InputStream input = new FileInputStream(filename);
-        BufferedReader reader = new BufferedReader(new InputStreamReader(input,
-                "UTF-8"));
+        BufferedReader reader = new BufferedReader(new InputStreamReader(input, "UTF-8"));
         return reader;
     }
 

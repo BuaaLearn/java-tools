@@ -1,4 +1,3 @@
-
 package com.xlab.tools.common.io.impl;
 
 import java.io.BufferedReader;
@@ -20,7 +19,7 @@ public class ResourceMapLineReader<K, V> extends BaseMapLineReader<K, V> {
     protected BufferedReader getReader(String filename) throws UnsupportedEncodingException {
         BufferedReader br;
         InputStream is = ResourceMapLineReader.class.getClassLoader().getResourceAsStream(filename);
-        br = new BufferedReader(new InputStreamReader(is,"UTF-8"));
+        br = new BufferedReader(new InputStreamReader(is, "UTF-8"));
         return br;
     }
 
