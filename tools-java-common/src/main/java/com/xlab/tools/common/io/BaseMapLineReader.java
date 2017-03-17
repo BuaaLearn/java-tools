@@ -9,7 +9,7 @@ import java.util.Map;
 
 import org.apache.logging.log4j.Logger;
 
-import com.xlab.tools.common.io.logger.LogUtil;
+import com.xlab.tools.common.logger.LogUtil;
 
 /**
  * <p>

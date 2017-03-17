@@ -3,8 +3,12 @@ package com.xlab.tools.common.util;
 import static org.junit.Assert.assertArrayEquals;
 import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertTrue;
+
 import java.util.Arrays;
+
 import org.junit.Test;
+
+import com.xlab.tools.common.tokenizer.TokenizerUtil;
 
 public class TokenizerUtilTest {
 

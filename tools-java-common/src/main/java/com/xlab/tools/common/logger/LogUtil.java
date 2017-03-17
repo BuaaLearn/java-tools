@@ -1,4 +1,4 @@
-package com.xlab.tools.common.io.logger;
+package com.xlab.tools.common.logger;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;

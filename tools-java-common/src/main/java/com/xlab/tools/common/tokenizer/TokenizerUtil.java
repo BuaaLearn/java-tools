@@ -1,4 +1,4 @@
-package com.xlab.tools.common.util;
+package com.xlab.tools.common.tokenizer;
 
 import java.util.List;
 

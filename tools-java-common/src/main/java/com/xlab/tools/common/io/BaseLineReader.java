@@ -6,8 +6,10 @@ import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.util.ArrayList;
 import java.util.List;
+
 import org.apache.logging.log4j.Logger;
-import com.xlab.tools.common.io.logger.LogUtil;
+
+import com.xlab.tools.common.logger.LogUtil;
 
 /**
  * <p>基础文件的读写</p>

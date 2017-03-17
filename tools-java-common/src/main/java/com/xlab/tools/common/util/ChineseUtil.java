@@ -5,9 +5,10 @@ import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
+
 import org.apache.logging.log4j.Logger;
 
-import com.xlab.tools.common.io.logger.LogUtil;
+import com.xlab.tools.common.logger.LogUtil;
 
 
 public class ChineseUtil {
