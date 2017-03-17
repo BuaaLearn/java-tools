@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/2002/xmlspec/dtd/2.10/xmlspec.dtd">
+<configuration status="OFF">
+	<properties>
+		<property name="LOG_HOME">logs</property>
+		<property name="BACKUP_HOME">${LOG_HOME}/backup</property>
+		<property name="SERVER_NAME">tools-java-common</property>
+		<!-- 自定义日志 -->
+		<property name="LOGGEETER">input</property>
+		
+	</properties>
+	<appenders>
+	    
+		<Console name="Console" target="SYSTEM_OUT">
+			<PatternLayout pattern="%d{HH:mm:ss.SSS} [%t] %-5level [%C:%line]- %msg%n" />
+		</Console>
+
+		<RollingRandomAccessFile name="common"
+			fileName="${LOG_HOME}/${SERVER_NAME}.log" filePattern="${LOG_HOME}/${SERVER_NAME}.%d{yyyy-MM-dd-HH}.log"
+			append="True">
+			<PatternLayout pattern="%d %level [%thread][%file:%line] - %msg%n" />
+			<Policies>
+				<TimeBasedTriggeringPolicy interval="24"
+					modulate="true" />
+				<SizeBasedTriggeringPolicy size="50MB" />
+			</Policies>
+			<DefaultRolloverStrategy max="50" />
+		</RollingRandomAccessFile>
+		
+		<RollingRandomAccessFile name="input"
+			fileName="${LOG_HOME}/${SERVER_NAME}-${LOGGEETER}.log"
+			filePattern="${LOG_HOME}/${SERVER_NAME}-${LOGGEETER}.%d{yyyy-MM-dd-HH}.log"
+			append="True">
+			<PatternLayout pattern="%d %msg%n" />
+			<Policies>
+				<SizeBasedTriggeringPolicy size="50MB" />
+			</Policies>
+		</RollingRandomAccessFile>
+	</appenders>
+	<loggers>
+		<logger name="com.xlab" level="info" additivity="False">
+			<appender-ref ref="common" />
+			<appender-ref ref="Console" />
+		</logger>
+		
+		<logger name="input" additivity="false">
+			<appenderRef ref="input" />
+		</logger>
+
+		<root level="info" additivity="False">
+			<appender-ref ref="Console" />
+		</root>
+
+	</loggers>
+
+</configuration>
