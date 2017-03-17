@@ -97,7 +97,6 @@ public class StringUtil {
      * 
      * @param value
      * @return
-     * @author huangtw3 2015年5月20日
      */
     public static boolean isEmpty(String value) {
         return null == value || value.isEmpty();
