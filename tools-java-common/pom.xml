@@ -3,11 +3,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.xlab.tools</groupId>
-	<artifactId>tools-java-utils</artifactId>
+	<artifactId>tools-java-common</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>tools-java-utils</name>
+	<name>tools-java-common</name>
 	<url>http://maven.apache.org</url>
 
 	<properties>
