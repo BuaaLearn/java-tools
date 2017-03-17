@@ -17,7 +17,7 @@ import com.xlab.tools.common.util.StringUtil;
  * </p>
  * @author towan  
  */
-public class PinyinService {
+public class SimplePinyinService {
    
     private static Map<String, String> ch2Pinyin = new HashMap<>();
     static{
