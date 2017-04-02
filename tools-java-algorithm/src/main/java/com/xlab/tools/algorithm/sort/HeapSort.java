@@ -26,10 +26,10 @@ public class HeapSort {
         System.out.println("build-after:"+Arrays.toString(arr));
         
         //2.堆排序
-        for(int i=1;i<n;i++){
+        for(int i=0;i<n-1;i++){
             //交换出最后一个当前元素和堆最后一个元素
-            swap(arr, 0, n-i);
-            adjustHeap(arr, 0, n-i-1);//元素不断再减小
+            swap(arr, 0, n-1-i);
+            adjustHeap(arr, 0, n-i-2);//元素不断再减小
             System.out.println("sort-pass["+i+"]:"+Arrays.toString(arr));
         }
     }
