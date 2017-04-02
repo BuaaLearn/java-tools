@@ -50,6 +50,16 @@ public class HeapSortTest {
     }
     
     @Test
+    public void test5() {
+        int arrs[] = new int[]{26, 5, 77, 1, 61, 11,92, 59, 15, 48, 19};
+        System.out.println("sort before:"+Arrays.toString(arrs));
+        test.heapSort(arrs);
+        System.out.println("sort after:"+Arrays.toString(arrs));
+        int expecteds[] = new int[]{1, 5, 11, 15, 19, 26, 48, 59, 61, 77,92};
+        assertArrayEquals("arr equal fail...", expecteds, arrs);
+    }
+    
+    @Test
     public void test_adjust(){
         int arrs[] = {41,23,18,20,19,36,4,12};
         System.out.println("adjust before:"+Arrays.toString(arrs));

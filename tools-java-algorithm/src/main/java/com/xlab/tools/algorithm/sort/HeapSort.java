@@ -18,18 +18,18 @@ public class HeapSort {
     void heapSort(int []arr){
         System.out.println("init build max heap..");
         //1.初始堆
-        int len = arr.length;
-        for(int i=1;i<=len/2;i++){
-            adjustHeap(arr, len/2-i, len-1);
+        int n = arr.length;
+        for(int i=0;i<n/2;i++){
+            adjustHeap(arr, n/2-i-1, n-1);//从后面的n/2-1调整走，调整到第0个元素
             System.out.println("build-pass["+i+"]:"+Arrays.toString(arr));
         }
         System.out.println("build-after:"+Arrays.toString(arr));
         
         //2.堆排序
-        for(int i=1;i<len;i++){
+        for(int i=1;i<n;i++){
             //交换出最后一个当前元素和堆最后一个元素
-            swap(arr, 0, len-i);
-            adjustHeap(arr, 0, len-i-1);//元素不断再减小
+            swap(arr, 0, n-i);
+            adjustHeap(arr, 0, n-i-1);//元素不断再减小
             System.out.println("sort-pass["+i+"]:"+Arrays.toString(arr));
         }
     }
@@ -71,7 +71,6 @@ public class HeapSort {
         }
         
     }
-    
     
     /**
      * 元素交换
