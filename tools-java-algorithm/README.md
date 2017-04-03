@@ -1,7 +1,20 @@
 tools java utils:
-#### Content
-- strings utils
-- files utils
+#### Sort
+- quick sort
+- max-heap sort
+- merge sort
+
+#### ShortPath
+- Dijkstra
+- Floyd
+
+#### MST
+- prim
+- Kruscal(ToDo)
+
+
+
+
 
 
 
