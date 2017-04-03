@@ -6,7 +6,7 @@ import java.util.Arrays;
 
 import org.junit.Test;
 
-public class ShortPathDijstraTest {
+public class ShortPathDijkstraTest {
     int INF = Integer.MAX_VALUE;
     
     @Test
@@ -20,7 +20,7 @@ public class ShortPathDijstraTest {
           /*E*/ { INF, INF,   5,   4,   0,   2,   8},
           /*F*/ {  16,   7,   6, INF,   2,   0,   9},
           /*G*/ {  14, INF, INF, INF,   8,   9,   0}};
-        ShortPathDijstra shortPath = new ShortPathDijstra(matrix);
+        ShortPathDijkstra shortPath = new ShortPathDijkstra(matrix);
 
         int vex_len = matrix.length;
         int[] prev = new int[vex_len];
@@ -42,7 +42,7 @@ public class ShortPathDijstraTest {
                 {INF, 50,0,20,10},
                 {30,INF,20,0,60},
                 {100,INF,10,60,0}};
-        ShortPathDijstra shortPath = new ShortPathDijstra(matrix);
+        ShortPathDijkstra shortPath = new ShortPathDijkstra(matrix);
 
         int vex_len = matrix.length;
         int[] prev = new int[vex_len];
@@ -66,7 +66,7 @@ public class ShortPathDijstraTest {
                 {INF, 1,   INF, 4,   0,   INF, 7},
                 {INF, INF, 11,  6,   INF, 0,   3},
                 {INF, INF, INF, INF, 7,   3,   0}};
-        ShortPathDijstra shortPath = new ShortPathDijstra(matrix);
+        ShortPathDijkstra shortPath = new ShortPathDijkstra(matrix);
 
         int vex_len = matrix.length;
         int[] prev = new int[vex_len];

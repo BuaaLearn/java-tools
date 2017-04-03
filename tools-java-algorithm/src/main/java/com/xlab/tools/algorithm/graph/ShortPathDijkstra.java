@@ -16,7 +16,7 @@ package com.xlab.tools.algorithm.graph;
  * </p>
  * @author towan  
  */
-public class ShortPathDijstra {
+public class ShortPathDijkstra {
 
     private int[][] mat;    // 邻接矩阵
     private static final int INF = Integer.MAX_VALUE;   // 最大值
@@ -26,7 +26,7 @@ public class ShortPathDijstra {
      * @param vexs 顶点名称
      * @param matrix 图的权值
      */
-    public ShortPathDijstra(int[][] matrix) {
+    public ShortPathDijkstra(int[][] matrix) {
         this.mat = matrix;
     }
 
